@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hanni Beauty Palace</title>
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+  (function () {
+    var saved = localStorage.getItem("hanni-theme");
+    var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+</head>
+<body>
+
+<!-- ============================= NAVBAR ============================= -->
+<header class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#hero" class="logo">Hanni Beauty Palace</a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#masters" class="nav-link">Masters</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#store" class="nav-link">Store</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </nav>
+
+    <button class="btn btn-accent nav-cta" id="navBookBtn">Schedule Visit</button>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============================= HERO ============================= -->
+<section class="hero" id="hero">
+  <div class="hero-bg" style="background-image:url('https://res.cloudinary.com/ny0or3ln/image/upload/v1788815066/hero_dty1c5.jpg')"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1 class="hero-title">
+      Unleash Your <span class="swap-word" id="swapWord">Glow</span>
+    </h1>
+    <p class="hero-subtext">
+      At Hanni Beauty Palace, we bring out the best version of you. Whether you're seeking a bold
+      transformation or the finest routine care, our expert team is here to deliver the
+      exceptional results you deserve. Discover the true luxury of feeling and looking fabulous.
+    </p>
+    <div class="hero-actions">
+      <button class="btn btn-accent" id="heroBookBtn">Schedule Visit</button>
+      <a href="#services" class="btn btn-outline">Explore Services</a>
+    </div>
+  </div>
+
+  <a href="#services" class="scroll-indicator" aria-label="Scroll down">
+    <span></span>
+  </a>
+</section>
+
+<!-- ============================= SERVICES ============================= -->
+<section class="section" id="services">
+  <div class="section-inner">
+    <p class="eyebrow center">What we offer</p>
+    <h2 class="section-title center">Services</h2>
+    <p class="section-desc center">
+      Explore our range of expert beauty and wellness treatments designed to refresh and
+      rejuvenate you.
+    </p>
+
+    <div class="services-list" id="servicesList"><!-- filled by script.js --></div>
+
+    <div class="show-more-wrap">
+      <button class="btn btn-outline" id="showMoreServices">Show More</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= MASTERS ============================= -->
+<section class="section alt" id="masters">
+  <div class="section-inner">
+    <p class="eyebrow center">Meet the team</p>
+    <h2 class="section-title center">Masters</h2>
+    <p class="section-desc center">
+      Meet our dedicated masters, each offering expert skills and personalized care to refine
+      your natural beauty.
+    </p>
+
+    <div class="masters-grid" id="mastersGrid"><!-- filled by script.js --></div>
+  </div>
+</section>
+
+<!-- ============================= ABOUT US ============================= -->
+<section class="section" id="about">
+  <div class="section-inner about-grid">
+    <div class="about-gallery">
+      <img src="images/about-us/1.webp" alt="Inside Hanni Beauty Palace" class="about-img img-1">
+      <img src="images/about-us/2.webp" alt="Hanni Beauty Palace treatment room" class="about-img img-2">
+      <img src="images/about-us/3.webp" alt="Hanni Beauty Palace styling chair" class="about-img img-3">
+      <img src="images/about-us/4.webp" alt="Hanni Beauty Palace reception" class="about-img img-4">
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow">Our story</p>
+      <h2 class="section-title">About Us</h2>
+      <p class="section-desc">
+        Nestled in Adigbe, Abeokuta, Ogun State, Hanni Beauty Palace was created to bring
+        personalized, luxurious beauty care to the community. We specialize in a full range of
+        services, including organic skincare, makeup, lash and microblading, pedicure and
+        manicure, facials, body treatments, and a curated store of cosmetics, perfumes and
+        wellness products — all designed to enhance your natural radiance. Our team uses quality
+        products and attentive, appointment-based care tailored to each client's unique style
+        and needs. What sets us apart is our devotion to detail and the warm atmosphere we
+        create, where beauty and confidence naturally come together. At Hanni Beauty Palace,
+        every visit is an opportunity to take time for yourself, relax, and leave feeling
+        renewed and graceful.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= TESTIMONIALS ============================= -->
+<section class="section alt" id="testimonials">
+  <div class="section-inner">
+    <p class="eyebrow center">Kind words</p>
+    <h2 class="section-title center">Testimonials</h2>
+    <p class="section-desc center">
+      Read the stories of people who trust us with their care, and see why you'll be in good
+      hands too.
+    </p>
+
+    <div class="testimonials-grid" id="testimonialsGrid"><!-- filled by script.js --></div>
+  </div>
+</section>
+
+<!-- ============================= STORE ============================= -->
+<section class="section" id="store">
+  <div class="section-inner">
+    <p class="eyebrow center">Take it home</p>
+    <h2 class="section-title center">Store</h2>
+    <p class="section-desc center">
+      Discover a line of modern beauty and wellness products crafted to nourish your skin and
+      energize your spirit.
+    </p>
+
+    <div class="products-grid" id="productsGrid"><!-- filled by script.js --></div>
+  </div>
+</section>
+
+<!-- ============================= FAQ ============================= -->
+<section class="section alt" id="faq">
+  <div class="section-inner narrow">
+    <p class="eyebrow center">Good to know</p>
+    <h2 class="section-title center">FAQ</h2>
+    <p class="section-desc center">
+      Find quick answers to common questions about booking, services, and salon policies.
+    </p>
+
+    <div class="faq-list" id="faqList"><!-- filled by script.js --></div>
+  </div>
+</section>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col footer-brand">
+      <p class="logo">Hanni Beauty Palace</p>
+      <p class="footer-tagline">Organic skincare, beauty & wellness.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="#hero">Home</a>
+      <a href="#services">Services</a>
+      <a href="#masters">Masters</a>
+      <a href="#about">About</a>
+      <a href="#store">Store</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Booking</h4>
+      <p>By appointment only</p>
+      <p>50% advance payment required</p>
+      <p>Bookings are non-refundable</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Adebiyi Shopping Complex,</p>
+      <p>Kuforiji Olubi Junction, Onikoko Road,</p>
+      <p>Adigbe, Abeokuta, Ogun State, Nigeria</p>
+      <p>0703 856 3822 · 0812 042 8466</p>
+      <p><a href="https://instagram.com/hanni_beautyplace" target="_blank" rel="noopener">@hanni_beautyplace</a></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Hanni Beauty Palace. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ============================= BOOKING MODAL ============================= -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="bookingModal">
+
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+
+    <!-- step progress -->
+    <div class="modal-steps" id="modalSteps"></div>
+
+    <div class="modal-body" id="modalBody"><!-- filled by script.js per step --></div>
+  </div>
+</div>
+
+<!-- success toast -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-card">
+    <div class="success-icon">&#10003;</div>
+    <h3>Success!</h3>
+    <p id="successMessage">Your spot has been reserved successfully!</p>
+    <button class="btn btn-accent" id="successOk">OK</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
